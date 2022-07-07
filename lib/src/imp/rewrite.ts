@@ -1,4 +1,4 @@
-import * as api from "pareto-async-api"
+import * as api from "pareto-async-functions-api"
 
 export function rewrite(
 ): api.Rewrite {

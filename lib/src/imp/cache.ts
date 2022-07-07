@@ -1,7 +1,8 @@
-import * as api from "pareto-async-api"
+import * as api from "pareto-async-functions-api"
+import * as asyncAPI from "pareto-async-api"
 
 export function createCache<T>(
-    get: (key: string) => api.IAsync<T>
+    get: (key: string) => asyncAPI.IAsync<T>
 ): api.ICache<T> {
     const resolved: { [key: string]: T } = {}
     const resolving: {
