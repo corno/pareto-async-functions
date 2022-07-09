@@ -1,12 +1,9 @@
-import * as pa from "pareto-lang-api"
-import * as pl from "pareto-lang-lib"
-import * as api from "pareto-async-api"
+import * as pl from "pareto-lib-core"
 import { createCounter } from "./createCounter"
-import { createDictionary } from "pareto-lang-lib"
 
 export function dictionaryImp<T>(
-    dictionary: pa.IReadonlyDictionary<api.IAsync<T>>,
-): api.IAsync<pa.IReadonlyDictionary<T>> {
+    dictionary: pl.IReadonlyDictionary<pl.IAsync<T>>,
+): pl.IAsync<pl.IReadonlyDictionary<T>> {
     return {
         execute: (cb) => {
             const temp: { [key: string]: T } = {}

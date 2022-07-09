@@ -1,12 +1,10 @@
-import * as pa from "pareto-lang-api"
-import * as pl from "pareto-lang-lib"
+import * as pl from "pareto-lib-core"
 
-import * as api from "pareto-async-api"
 import { dictionaryImp } from "./dictionary"
 
 export function rawDictionaryImp<T>(
-    $: { [key: string]: api.IAsync<T> },
-): api.IAsync<pa.IReadonlyDictionary<T>> {
+    $: { [key: string]: pl.IAsync<T> },
+): pl.IAsync<pl.IReadonlyDictionary<T>> {
     return dictionaryImp(
         pl.createDictionary($),
     )

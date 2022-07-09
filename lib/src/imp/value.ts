@@ -1,9 +1,9 @@
-import * as api from "pareto-async-api"
+import * as pl from "pareto-lib-core"
 
 
 export function valueImp<T>(
     v: T
-): api.IAsync<T> {
+): pl.IAsync<T> {
     return {
         execute: (cb) => {
             cb(v)
