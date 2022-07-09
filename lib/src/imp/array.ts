@@ -1,10 +1,10 @@
-import * as pl from "pareto-lib-core"
+import * as pa from "pareto-api-core"
 import { createCounter } from "./createCounter"
 
 export function array() {
     function array<T>(
-        array: pl.IAsync<T>[],
-    ): pl.IAsync<T[]> {
+        array: pa.IAsync<T>[],
+    ): pa.IAsync<T[]> {
         return {
             execute: (cb) => {
                 const temp: T[] = []

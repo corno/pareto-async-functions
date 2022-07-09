@@ -1,11 +1,11 @@
 import * as api from "pareto-async-functions-api"
-import * as pl from "pareto-lib-core"
+import * as pa from "pareto-api-core"
 
 export function tuple2Imp<T1, T2, Result>(
-    cb1: pl.IAsync<T1>,
-    cb2: pl.IAsync<T2>,
+    cb1: pa.IAsync<T1>,
+    cb2: pa.IAsync<T2>,
     map: ($: api.Tuple2Result<T1, T2>) => Result,
-): pl.IAsync<Result> {
+): pa.IAsync<Result> {
     return {
         execute: (cb) => {
             let elem1IsSet = false
@@ -39,11 +39,11 @@ export function tuple2() {
 }
 
 export function tuple3Imp<T1, T2, T3, Result>(
-    cb1: pl.IAsync<T1>,
-    cb2: pl.IAsync<T2>,
-    cb3: pl.IAsync<T3>,
+    cb1: pa.IAsync<T1>,
+    cb2: pa.IAsync<T2>,
+    cb3: pa.IAsync<T3>,
     map: ($: api.Tuple3Result<T1, T2, T3>) => Result,
-): pl.IAsync<Result> {
+): pa.IAsync<Result> {
     return {
         execute: (cb) => {
             let elem1IsSet = false
