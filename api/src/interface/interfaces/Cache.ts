@@ -1,4 +1,4 @@
-import { IAsync } from "pareto-async-api"
+import { IAsync } from "pareto-api-core"
 
 export type ICache<T> = {
     getEntry: (
