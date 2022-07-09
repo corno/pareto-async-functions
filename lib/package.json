@@ -5,7 +5,7 @@
     "pareto-api-core": "^0.1.0",
     "pareto-async-functions-api": "^0.9.0",
     "pareto-lib-core": "^0.5.0",
-    "pareto-runtime": "^0.24.0"
+    "pareto-runtime": "^0.25.0"
   },
   "files": [
     "dist",
@@ -26,5 +26,5 @@
   },
   "types": "dist/index.d.ts",
   "version": "0.12.0",
-  "content-fingerprint": "9e5d07a8ce4cf68428663f966117215eeb891de5"
+  "content-fingerprint": "acc512fb357a9e3d64737ec5de598e0bf42de5e1"
 }
