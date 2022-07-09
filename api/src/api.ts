@@ -1,44 +1,43 @@
-import * as pa from "pareto-lang-api"
-import * as asyncAPI from "pareto-async-api"
+import * as pa from "pareto-api-core"
 import { ICache, Tuple2Result, Tuple3Result } from "./interface"
 
 export type CreateCache = <T>(
-    get: (key: string) => asyncAPI.IAsync<T>
+    get: (key: string) => pa.IAsync<T>
 ) => ICache<T>
 
 export type Dictionary = <T>(
-    dictionary: pa.IReadonlyDictionary<asyncAPI.IAsync<T>>,
-) => asyncAPI.IAsync<pa.IReadonlyDictionary<T>>
+    dictionary: pa.IReadonlyDictionary<pa.IAsync<T>>,
+) => pa.IAsync<pa.IReadonlyDictionary<T>>
 
 export type RawDictionary = <T>(
-    $: { [key: string]: asyncAPI.IAsync<T> },
-) => asyncAPI.IAsync<pa.IReadonlyDictionary<T>>
+    $: { [key: string]: pa.IAsync<T> },
+) => pa.IAsync<pa.IReadonlyDictionary<T>>
 
 export type Array = <T>(
-    array: asyncAPI.IAsync<T>[],
-) => asyncAPI.IAsync<T[]>
+    array: pa.IAsync<T>[],
+) => pa.IAsync<T[]>
 
 export type Rewrite = <Out, In>(
-    source: asyncAPI.IAsync<In>,
+    source: pa.IAsync<In>,
     rewrite: (source: In) => Out
-) => asyncAPI.IAsync<Out>
+) => pa.IAsync<Out>
 
 export type Value = <T>(
     v: T
-) => asyncAPI.IAsync<T>
+) => pa.IAsync<T>
 
 export type Tuple2 = <T1, T2, Result>(
-    cb1: asyncAPI.IAsync<T1>,
-    cb2: asyncAPI.IAsync<T2>,
+    cb1: pa.IAsync<T1>,
+    cb2: pa.IAsync<T2>,
     map: ($: Tuple2Result<T1, T2>) => Result,
-) => asyncAPI.IAsync<Result>
+) => pa.IAsync<Result>
 
 export type Tuple3 = <T1, T2, T3, Result> (
-    cb1: asyncAPI.IAsync<T1>,
-    cb2: asyncAPI.IAsync<T2>,
-    cb3: asyncAPI.IAsync<T3>,
+    cb1: pa.IAsync<T1>,
+    cb2: pa.IAsync<T2>,
+    cb3: pa.IAsync<T3>,
     map: ($: Tuple3Result<T1, T2, T3>) => Result,
-) => asyncAPI.IAsync<Result>
+) => pa.IAsync<Result>
 
 export type API = {
     createCache: CreateCache
