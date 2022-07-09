@@ -3,8 +3,6 @@
   "bin": {},
   "dependencies": {
     "pareto-async-functions-api": "^0.8.0",
-    "pareto-lang-api": "^0.6.0",
-    "pareto-lang-lib": "^0.8.0",
     "pareto-runtime": "^0.24.0"
   },
   "files": [
