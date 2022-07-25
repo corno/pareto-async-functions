@@ -10,10 +10,10 @@ export function dictionaryImp<T>(
             const temp: { [key: string]: T } = {}
             createCounter(
                 (counter) => {
-                    dictionary.toArray().forEach(($) => {
+                    dictionary.forEach(() => true, ($, key) => {
                         counter.increment()
-                        $.value.execute((v) => {
-                            temp[$.key] = v
+                        $.execute((v) => {
+                            temp[key] = v
                             counter.decrement()
                         })
                     })
