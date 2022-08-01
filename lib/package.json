@@ -3,8 +3,7 @@
   "bin": {},
   "dependencies": {
     "pareto-async-functions-api": "^0.10.0",
-    "pareto-lib-core": "^0.6.0",
-    "pareto-runtime": "^0.25.0"
+    "pareto-lib-core": "^0.6.0"
   },
   "files": [
     "dist",
@@ -25,5 +24,5 @@
   },
   "types": "dist/index.d.ts",
   "version": "0.15.0",
-  "content-fingerprint": "a35aadb341bc7c7db6efbbb84e3be3643b66a83b"
+  "content-fingerprint": "7d10f43545d104a8933fde7e4efd370801450768"
 }

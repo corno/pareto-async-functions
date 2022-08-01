@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "pareto-runtime": "^0.25.0",
     "pareto-test-lib": "^0.21.0"
   }
 }
